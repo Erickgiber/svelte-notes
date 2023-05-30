@@ -17,7 +17,7 @@
   >
     <img
       class="w-36 bg-gray-900 rounded-full"
-      src={$user.photo ?? photo}
+      src={$user.photo !== '' ? $user.photo : photo}
       alt="You"
     />
   </button>

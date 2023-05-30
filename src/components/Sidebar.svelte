@@ -19,7 +19,7 @@
   >
     <img
       class="w-9 bg-gray-900 h-9 rounded-full select-none"
-      src={$user.photo ?? photo}
+      src={$user.photo !== '' ? $user.photo : photo}
       alt="You"
     />
     <p class="w-28 text-sm overflow-hidden text-ellipsis">{$user.name}</p>
