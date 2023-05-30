@@ -37,6 +37,8 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^38.0.1",
+    "ckeditor5-svelte": "^0.0.10",
     "svelte-routing": "^1.8.9"
   }
 }

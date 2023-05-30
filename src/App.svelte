@@ -2,6 +2,7 @@
   import { Route, Router } from 'svelte-routing';
   import { writable } from 'svelte/store';
   import Sidebar from './components/Sidebar.svelte';
+  import Create from './pages/Create.svelte';
   import Dashboard from './pages/Dashboard.svelte';
   import Profile from './pages/Profile.svelte';
   import { createUserLocal } from './tools/createUserLocal';
@@ -16,6 +17,7 @@
     <Sidebar {user} />
     <Route path="/" component={Dashboard} />
     <Route path="/profile" component={Profile} {user} />
+    <Route path="/note/create" component={Create} />
   </main>
 </Router>
 

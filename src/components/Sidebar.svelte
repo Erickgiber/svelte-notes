@@ -33,7 +33,7 @@
       </Link>
     </li>
     <li class="w-full">
-      <Link to="/create" class={linkClass}>
+      <Link to="/note/create" class={linkClass}>
         <Icon class="text-lg" icon="carbon:new-tab" />
         <p>New note</p>
       </Link>
