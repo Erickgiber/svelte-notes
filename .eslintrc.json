@@ -17,7 +17,7 @@
   },
   "overrides": [
     {
-      "files": ["*.svelte"],
+      "files": ["*.{svelte, ts}"],
       "processor": "svelte3/svelte3"
     }
   ]
