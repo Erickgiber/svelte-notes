@@ -3,7 +3,7 @@ export const createUserLocal = () => {
     
     const user = JSON.stringify({
         name:  "Your Name",
-        photo: "/src/assets/user.webp",
+        photo: "",
     });
     window.localStorage.setItem("user", user);
 }

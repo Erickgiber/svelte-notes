@@ -3,6 +3,7 @@
   // @ts-ignore
   import Icon from '@iconify/svelte';
   import { Link } from 'svelte-routing';
+  import photo from '../assets/user.webp';
   export let user;
 
   const linkClass =
@@ -18,7 +19,7 @@
   >
     <img
       class="w-9 bg-gray-900 h-9 rounded-full select-none"
-      src={$user.photo}
+      src={$user.photo ?? photo}
       alt="You"
     />
     <p class="w-28 text-sm overflow-hidden text-ellipsis">{$user.name}</p>

@@ -1,5 +1,6 @@
 <!-- Profile.svelte -->
 <script lang="ts">
+  import photo from '../assets/user.webp';
   import { handleChangeName as changeName } from './handlers/handleChangeName';
   import { handleChangePhoto as changePhoto } from './handlers/handleChangePhoto';
 
@@ -14,7 +15,11 @@
     class="border-4 outline-none rounded-full focus-visible:border-blue-400"
     on:click={handleChangePhoto}
   >
-    <img class="w-36 bg-gray-900 rounded-full" src={$user.photo} alt="You" />
+    <img
+      class="w-36 bg-gray-900 rounded-full"
+      src={$user.photo ?? photo}
+      alt="You"
+    />
   </button>
   <div class="w-38">
     <input
