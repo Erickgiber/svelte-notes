@@ -13,16 +13,18 @@
   </h1>
   {#each notes as note}
     <article
-      class="bg-gray-900 flex flex-col shadow-xl w-xl h-24 w-60 px-0 py-2 rounded-lg"
+      class="bg-gray-900 flex flex-col shadow-xl h-32 w-48 px-0 py-2 rounded-lg"
     >
       <p
-        class="w-full px-2 pb-1 border-b border-gray-700 flex items-center gap-1"
+        class="w-full flex items-center px-2 pb-1 border-b border-gray-700 gap-1"
       >
         <b class="text-gray-600 text-xs select-none"> Title: </b>
         <span class="text-sm"> {note.title} </span>
       </p>
-      <p class="w-full px-2 py-1 text-sm overflow-hidden text-ellipsis">
-        <b class="text-gray-600 text-xs select-none"> Description: </b>
+      <p
+        class="w-full flex flex-col px-2 py-1 text-sm overflow-hidden text-ellipsis"
+      >
+        <b class="text-gray-600 text-xs"> Description </b>
         <span class="text-sm"> {note.description} </span>
       </p>
     </article>
