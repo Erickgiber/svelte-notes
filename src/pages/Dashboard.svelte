@@ -24,7 +24,7 @@
       <p
         class="w-full flex flex-col px-2 py-1 text-sm overflow-hidden text-ellipsis"
       >
-        <b class="text-gray-600 text-xs"> Description </b>
+        <b class="text-gray-600 text-xs select-none"> Description </b>
         <span class="text-sm"> {note.description} </span>
       </p>
     </article>
