@@ -1,15 +1,16 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
+  import { navigate } from 'svelte-routing';
   import { createNoteLocal } from '../tools/createNoteLocal';
 
   const onSubmit = (event) => {
     event.preventDefault();
     const { title, description } = event.target.elements;
-    const data = {
+    createNoteLocal({
       title: title.value,
       description: description.value,
-    };
-    createNoteLocal(data);
+    });
+    navigate('/');
   };
 </script>
 
