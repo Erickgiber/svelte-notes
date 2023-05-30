@@ -3,9 +3,10 @@
   // @ts-ignore
   import Icon from '@iconify/svelte';
   import { Link } from 'svelte-routing';
-  import userLogo from '../assets/user.webp';
-  const user = JSON.parse(localStorage.getItem('user'));
-  const profilePhoto = user?.photo ?? userLogo;
+  export let user;
+
+  const linkClass =
+    'shadow-lg rounded-md w-full bg-gray-900 px-2 py-2.5 flex items-center gap-2 hover:text-blue-400';
 </script>
 
 <aside
@@ -16,21 +17,25 @@
     class="w-full h-16 p-2 shadow-lg bg-gray-900 rounded-md flex items-center flex-wrap gap-3"
   >
     <img
-      class="w-9 h-9 rounded-full select-none"
-      src={profilePhoto}
+      class="w-9 bg-gray-900 h-9 rounded-full select-none"
+      src={$user.photo}
       alt="You"
     />
-    <p class="w-28 overflow-hidden text-ellipsis">Your name</p>
+    <p class="w-28 text-sm overflow-hidden text-ellipsis">{$user.name}</p>
   </Link>
 
-  <ul class="w-full mt-3 select-none">
+  <ul class="w-full mt-3 select-none flex flex-col gap-3">
     <li class="w-full">
-      <button
-        class="shadow-lg rounded-md w-full bg-gray-900 px-2 py-2.5 flex items-center gap-1"
-      >
+      <Link to="/" class={linkClass}>
+        <Icon class="text-lg" icon="material-symbols:dashboard-outline" />
+        <p>Dashboard</p>
+      </Link>
+    </li>
+    <li class="w-full">
+      <Link to="/create" class={linkClass}>
         <Icon class="text-lg" icon="carbon:new-tab" />
         <p>New note</p>
-      </button>
+      </Link>
     </li>
   </ul>
 </aside>
