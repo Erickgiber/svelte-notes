@@ -15,7 +15,7 @@
 >
   <Link
     to="/profile"
-    class="w-full h-16 p-2 shadow-lg bg-gray-900 rounded-md flex items-center flex-wrap gap-3"
+    class="w-full h-14 p-2 shadow-lg bg-gray-900 rounded-md flex items-center flex-wrap gap-3"
   >
     <img
       class="w-9 bg-gray-900 h-9 rounded-full select-none"

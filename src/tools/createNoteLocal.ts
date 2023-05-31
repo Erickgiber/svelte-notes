@@ -4,6 +4,7 @@ export const createNoteLocal = (data: {title:string, description:string}) => {
         notes.push(data);
         const stringNotes = JSON.stringify(notes)
         window.localStorage.setItem('notes', stringNotes);
+        return;
     }
     const note = [data];
     const stringNotes = JSON.stringify(note);
