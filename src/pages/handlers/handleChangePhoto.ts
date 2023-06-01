@@ -1,7 +1,6 @@
 import { setUserLocal } from "../../tools/setUserLocal";
 
 export const handleChangePhoto = (user, $user) => {
-  console.log($user)
   const input = document.createElement('input');
   input.type = 'file';
   input.accept = 'image/*';
